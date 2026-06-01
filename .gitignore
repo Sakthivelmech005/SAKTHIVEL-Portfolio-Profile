@@ -2,3 +2,6 @@
 dist
 .vscode
 .env
+.next
+node_modules
+sakthivel-vite-portfolio
