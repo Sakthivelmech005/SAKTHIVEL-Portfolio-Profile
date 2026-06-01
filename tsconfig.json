@@ -15,6 +15,27 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "sections/**/*.ts",
+    "sections/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "styles/**/*.ts",
+    "styles/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "sakthivel-vite-portfolio/**/*",
+    "SAKTHIVEL Portfolio/**/*",
+    "SAKTHI PORTFOLIO NEW/**/*",
+    ".next",
+    "**/node_modules"
+  ]
 }

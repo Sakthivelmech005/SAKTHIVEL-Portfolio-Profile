@@ -5,3 +5,6 @@ dist
 .next
 node_modules
 sakthivel-vite-portfolio
+tsconfig.tsbuildinfo
+build-output.log
+verify-build.js

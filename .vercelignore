@@ -1,0 +1,12 @@
+# Ignore nested or legacy portfolio apps not intended for deployment
+sakthivel-vite-portfolio/
+SAKTHIVEL Portfolio/
+SAKTHI PORTFOLIO NEW/
+
+# Ignore local build and environment artifacts
+**/node_modules
+**/.git
+**/.DS_Store
+**/tsconfig.tsbuildinfo
+build-output.log
+verify-build.js
