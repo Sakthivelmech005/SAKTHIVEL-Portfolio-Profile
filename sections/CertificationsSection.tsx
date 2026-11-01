@@ -4,14 +4,22 @@ import { motion } from 'framer-motion';
 
 const certifications = [
   {
-    title: 'CATIA (TANCAM)',
-    issuer: 'TAMIL NADU CERTIFICATION AUTHORITY FOR MECHANICAL',
-    highlight: 'Advanced CAD modeling and assembly certification.',
+    title: 'CATIA V5 & 3DEXPERIENCE Certifications',
+    issuer: 'Dassault Systèmes / TANCAM',
+    highlight: 'CAD and product design certifications.',
+    logo: '/logos/dassault-systemes.png',
   },
   {
-    title: 'Innovation Ambassador',
+    title: 'AICTE Innovation Student Ambassador',
     issuer: 'AICTE',
-    highlight: 'Accredited innovation leadership and product development mentorship.',
+    highlight: 'All India Council for Technical Education.',
+    logo: '/logos/aicte.jpg',
+  },
+  {
+    title: 'Best Research Paper Award',
+    issuer: 'Annamalai University',
+    highlight: 'Research recognition.',
+    logo: '/logos/annamalai-university.png',
   },
 ];
 
@@ -21,9 +29,9 @@ export default function CertificationsSection() {
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Certifications"
-          subtitle="Verified credentials that validate expertise in CAD and innovation."
+          subtitle="Credentials and recognition listed in the attached resume."
         />
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.title}

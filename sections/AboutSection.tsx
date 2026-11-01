@@ -2,11 +2,9 @@ import SectionHeading from '../components/SectionHeading';
 import { motion } from 'framer-motion';
 
 const bullets = [
-  'Mechanical Engineering Student',
-  'CAD Designer',
-  'Product Design Enthusiast',
-  'Innovation Ambassador',
-  'Engineering Research Contributor',
+  'CATIA V5, SolidWorks, AutoCAD, and 3DEXPERIENCE',
+  'Mechanical design, engineering analysis, and manufacturing',
+  'Innovation, product development, and collaborative engineering',
 ];
 
 export default function AboutSection() {
@@ -14,8 +12,8 @@ export default function AboutSection() {
     <section className="border-t border-slate-800/60 py-20">
       <div className="container mx-auto px-4">
         <SectionHeading
-          title="About"
-          subtitle="Professional summary for recruiters and innovation partners."
+          title="About Me"
+          subtitle="Mechanical engineering student focused on CAD design and innovative engineering solutions."
         />
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <motion.div
@@ -26,10 +24,12 @@ export default function AboutSection() {
             className="glass-card rounded-[2rem] border p-10"
           >
             <p className="text-lg leading-8 text-slate-300">
-              I am a Mechanical Engineering student with deep expertise in CAD modeling, product
-              design, and applied research. My focus is on delivering premium engineering solutions
-              with attention to manufacturability, technical drawing accuracy, and innovation
-              leadership.
+              Mechanical Engineering undergraduate specializing in CAD modelling, product design,
+              and manufacturing engineering. Proficient in CATIA V5, SolidWorks, AutoCAD, and
+              3DEXPERIENCE for design and engineering analysis. Experienced in multidisciplinary
+              projects involving robotic welding, electric mobility, hydrogen production, and AI
+              applications. AICTE Innovation Student Ambassador and Best Research Paper Award
+              recipient, passionate about innovative engineering solutions.
             </p>
             <div className="mt-8 space-y-4">
               {bullets.map((item) => (
@@ -48,17 +48,17 @@ export default function AboutSection() {
             className="grid gap-6"
           >
             <div className="glass-card rounded-[2rem] border p-8">
-              <h3 className="text-xl font-semibold text-slate-100">Professional attitude</h3>
+              <h3 className="text-xl font-semibold text-slate-100">Engineering interests</h3>
               <p className="mt-4 text-slate-400 leading-7">
-                I deliver recruiter-ready documentation, polished technical presentations, and
-                strong stakeholder communication in every mechanical engineering engagement.
+                Mechanical design, product development, electric mobility, renewable hydrogen
+                production, robotic welding, and engineering analysis.
               </p>
             </div>
             <div className="glass-card rounded-[2rem] border p-8">
-              <h3 className="text-xl font-semibold text-slate-100">Research and mentorship</h3>
+              <h3 className="text-xl font-semibold text-slate-100">Innovation & collaboration</h3>
               <p className="mt-4 text-slate-400 leading-7">
-                Engaged in research-driven projects, workshops, and mentorship roles that bolster
-                team performance and innovation outcomes.
+                Applies analytical thinking, problem-solving, teamwork, and project coordination to
+                multidisciplinary engineering concepts.
               </p>
             </div>
           </motion.div>

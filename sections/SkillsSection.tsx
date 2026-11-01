@@ -1,26 +1,44 @@
 import SectionHeading from '../components/SectionHeading';
-import SkillBar from '../components/SkillBar';
 import { motion } from 'framer-motion';
 
-const technical = [
-  { label: 'SolidWorks', score: 92 },
-  { label: 'AutoCAD', score: 88 },
-  { label: 'CATIA', score: 85 },
-  { label: 'ANSYS', score: 80 },
-  { label: 'Product Design', score: 92 },
-  { label: 'GD&T', score: 87 },
-  { label: 'CAD Modeling', score: 90 },
-  { label: 'Mechanical Design', score: 92 },
-  { label: 'Technical Drawing', score: 94 },
-  { label: 'BOM Preparation', score: 89 },
-];
-
-const professional = [
-  { label: 'Team Leadership', score: 90 },
-  { label: 'Project Management', score: 86 },
-  { label: 'Problem Solving', score: 93 },
-  { label: 'Communication', score: 88 },
-  { label: 'Innovation Management', score: 91 },
+const groups = [
+  {
+    title: 'CAD & Design Software',
+    skills: [
+      'CATIA V5: Part Design, Generative Shape Design, Assembly Design, Drafting',
+      'SolidWorks',
+      'AutoCAD',
+      '3DEXPERIENCE',
+    ],
+  },
+  {
+    title: 'Engineering & Manufacturing',
+    skills: [
+      'Engineering drawings and GD&T fundamentals',
+      'Mechanical component design and material selection',
+      'Design for Manufacturing and Design for Assembly (DFM/DFA)',
+      'Basic FEA and engineering analysis',
+      'Machining, welding, casting, forging, and automation fundamentals',
+    ],
+  },
+  {
+    title: 'Computer & Office Applications',
+    skills: [
+      'MS Excel and PowerPoint',
+      'Technical documentation',
+      'Exposure to AI workflow automation and computer vision',
+    ],
+  },
+  {
+    title: 'Core & Soft Skills',
+    skills: [
+      'Problem-solving and analytical thinking',
+      'Product development and innovation',
+      'Teamwork and leadership',
+      'Project coordination and technical communication',
+      'Continuous learning and Vibe Coding',
+    ],
+  },
 ];
 
 export default function SkillsSection() {
@@ -29,37 +47,29 @@ export default function SkillsSection() {
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Skills"
-          subtitle="Technical and professional strengths for engineering excellence."
+          subtitle="Design tools, manufacturing knowledge, and professional capabilities."
         />
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-          <motion.div
-            initial={{ opacity: 0, y: 36 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.65 }}
-            className="glass-card rounded-[2rem] border p-8"
-          >
-            <h3 className="text-xl font-semibold text-slate-100">Technical Skills</h3>
-            <div className="mt-8 space-y-5">
-              {technical.map((skill) => (
-                <SkillBar key={skill.label} label={skill.label} score={skill.score} />
-              ))}
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 36 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.65, delay: 0.1 }}
-            className="glass-card rounded-[2rem] border p-8"
-          >
-            <h3 className="text-xl font-semibold text-slate-100">Professional Skills</h3>
-            <div className="mt-8 space-y-5">
-              {professional.map((skill) => (
-                <SkillBar key={skill.label} label={skill.label} score={skill.score} />
-              ))}
-            </div>
-          </motion.div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {groups.map((group, index) => (
+            <motion.div
+              key={group.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55, delay: index * 0.08 }}
+              className="glass-card rounded-2xl border p-7"
+            >
+              <h3 className="text-xl font-semibold text-slate-100">{group.title}</h3>
+              <ul className="mt-5 space-y-3">
+                {group.skills.map((skill) => (
+                  <li key={skill} className="flex gap-3 leading-7 text-slate-300">
+                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-electric" />
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

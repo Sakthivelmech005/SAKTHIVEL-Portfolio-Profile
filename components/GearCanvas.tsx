@@ -80,7 +80,6 @@ export default function GearCanvas() {
   return (
     <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border border-slate-500/30 bg-slate-950/70 shadow-glow">
       <canvas ref={canvasRef} className="h-full w-full" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(14,165,233,0.18),_transparent_35%)]" />
     </div>
   );
 }

@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config '../tailwind.config.ts';
+@import 'tailwindcss';
 
 :root {
   color-scheme: dark;
@@ -22,9 +21,7 @@ html {
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(14, 165, 233, 0.12), transparent 20%),
-    radial-gradient(circle at bottom right, rgba(148, 163, 184, 0.08), transparent 18%), #070707;
+  background: #070707;
   color: #e2e8f0;
 }
 
@@ -61,12 +58,7 @@ body.light .glass-card {
   border-top: 1px solid rgba(148, 163, 184, 0.14);
 }
 
-/* Premium profile image styling */
-.shadow-profile {
-  box-shadow: 0 0 60px rgba(14, 165, 233, 0.25), 0 0 30px rgba(14, 165, 233, 0.15),
-    inset 0 0 30px rgba(14, 165, 233, 0.08);
-}
-
+/* Profile image container styling (kept minimal) */
 .profile-image-container {
   perspective: 1000px;
 }
@@ -77,6 +69,57 @@ body.light .glass-card {
 
 .profile-image-container:hover img {
   transform: scale(1.05);
+}
+
+/* Premium avatar styles moved here for compatibility with Tailwind configs */
+.premium-avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.95);
+  background-color: #e0f2fe; /* sky-blue (Tailwind sky-100) */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  will-change: transform;
+  transition: transform 0.35s ease;
+}
+.premium-avatar:hover {
+  transform: scale(1.03);
+}
+
+/* Premium Hero Background */
+.hero-bg {
+  background: linear-gradient(180deg, #050B18 0%, #08111F 40%, #091B27 70%, #05080F 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft radial glow behind profile image */
+.hero-center-glow {
+  position: absolute;
+  left: 64%;
+  top: 38%;
+  width: 520px;
+  height: 520px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at center, rgba(0,195,255,0.18) 0%, rgba(0,120,255,0.10) 40%, transparent 70%);
+  filter: blur(40px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* subtle overlay to tint whole hero */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,180,255,0.06) 0%, transparent 70%);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* refined glass-card for premium look */
+.glass-card {
+  background: rgba(10,18,30,0.65);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 /* Responsive profile image sizing */

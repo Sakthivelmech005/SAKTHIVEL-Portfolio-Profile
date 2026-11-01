@@ -1,35 +1,49 @@
-import Link from 'next/link';
-import { ArrowUpRight, Github } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   title: string;
+  meta: string;
   description: string;
   technologies: string[];
-  image: string;
-  githubUrl: string;
-  detailsUrl: string;
+  icon: LucideIcon;
+  logo?: string;
 }
 
 export default function ProjectCard({
   title,
+  meta,
   description,
   technologies,
-  image,
-  githubUrl,
-  detailsUrl,
+  icon: Icon,
+  logo,
 }: ProjectCardProps) {
   return (
-    <div className="glass-card group overflow-hidden rounded-[2rem] border p-6 transition hover:-translate-y-1 hover:border-electric/30">
-      <div className="mb-5 overflow-hidden rounded-3xl bg-slate-900/80">
-        <img
-          src={image}
-          alt={title}
-          className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
-        />
+    <article className="glass-card group h-full overflow-hidden rounded-2xl border p-6 transition hover:-translate-y-1 hover:border-electric/30">
+      <div className="mb-6 flex h-36 items-center justify-between rounded-xl border border-slate-700/70 bg-slate-900/70 px-6">
+        <span className="text-xs uppercase tracking-[0.24em] text-slate-400">
+          Engineering project
+        </span>
+        <div className="flex items-center gap-3">
+          {logo && (
+            <Image
+              src={logo}
+              alt={`${title} logo`}
+              width={52}
+              height={52}
+              className="h-12 w-12 rounded-lg bg-white object-contain p-1"
+            />
+          )}
+          <Icon
+            aria-hidden="true"
+            className="h-12 w-12 text-electric transition group-hover:scale-110"
+            strokeWidth={1.3}
+          />
+        </div>
       </div>
       <div className="space-y-4">
         <div>
-          <p className="text-sm uppercase tracking-[0.24em] text-electric">Project</p>
+          <p className="text-sm uppercase tracking-[0.16em] text-electric">{meta}</p>
           <h3 className="mt-3 text-2xl font-semibold text-slate-100">{title}</h3>
         </div>
         <p className="text-slate-400">{description}</p>
@@ -43,23 +57,7 @@ export default function ProjectCard({
             </span>
           ))}
         </div>
-        <div className="flex flex-wrap gap-3 pt-2">
-          <Link
-            href={detailsUrl}
-            className="inline-flex items-center gap-2 rounded-full border border-electric/40 px-4 py-2 text-sm text-electric transition hover:bg-electric/10"
-          >
-            Details <ArrowUpRight size={16} />
-          </Link>
-          <Link
-            href={githubUrl}
-            className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 px-4 py-2 text-sm text-slate-200 transition hover:border-electric hover:text-electric"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Github size={16} /> GitHub
-          </Link>
-        </div>
       </div>
-    </div>
+    </article>
   );
 }

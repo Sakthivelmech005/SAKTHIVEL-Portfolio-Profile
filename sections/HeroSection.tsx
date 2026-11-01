@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,8 +9,9 @@ import ProfileImage from '../components/ProfileImage';
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-24">
-      <div className="absolute inset-0 bg-hero-pattern opacity-80" />
+    <section className="hero-bg min-h-screen relative overflow-hidden py-16 sm:py-24">
+      <div className="hero-overlay" />
+      <div className="hero-center-glow" />
       <div className="container relative mx-auto grid gap-12 px-4 lg:grid-cols-[1fr_1.2fr] xl:px-0">
         {/* Left Content Section */}
         <motion.div
@@ -20,16 +21,16 @@ export default function HeroSection() {
           className="order-2 flex flex-col justify-center space-y-8 lg:order-1"
         >
           <span className="inline-flex w-fit items-center gap-3 rounded-full border border-electric/40 bg-slate-900/70 px-4 py-2 text-sm uppercase tracking-[0.24em] text-electric shadow-glow">
-            Mechanical Engineering x Product Design
+            B.E. Mechanical Engineering Â· Class of 2027
           </span>
           <div className="space-y-5">
             <h1 className="text-4xl font-semibold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
-              Sakthivel S
+              SAKTHIVEL S
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-              Mechanical Engineer | CAD Designer | Innovation Leader. Building premium engineering
-              experiences with design systems, research-led product thinking, and high-performance
-              execution.
+              Mechanical Engineering Student | CAD Designer | Product Design Enthusiast. Focused on
+              CAD modelling, product design, and manufacturing engineering with SolidWorks, AutoCAD,
+              and CATIA V5.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
@@ -37,11 +38,11 @@ export default function HeroSection() {
               href="/projects"
               className="inline-flex items-center gap-2 rounded-full bg-electric px-6 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110"
             >
-              View Projects <ArrowRight size={16} />
+              View My Projects <ArrowRight size={16} />
             </Link>
             <a
-              href="/resume.pdf"
-              download
+              href="/Sakthivel_S_Designer_Resume.docx"
+              download="Sakthivel-S-Resume.docx"
               className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/80 px-6 py-3 text-sm text-slate-200 transition hover:border-electric hover:text-electric"
             >
               <Download size={16} /> Download Resume
@@ -53,18 +54,12 @@ export default function HeroSection() {
               <Mail size={16} /> Contact Me
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-4 sm:max-w-md">
-            <div className="glass-card rounded-3xl border p-5">
-              <p className="text-4xl font-semibold text-electric">12+</p>
-              <p className="mt-2 text-sm uppercase tracking-[0.24em] text-slate-400">Projects</p>
-            </div>
-            <div className="glass-card rounded-3xl border p-5">
-              <p className="text-4xl font-semibold text-electric">2027</p>
-              <p className="mt-2 text-sm uppercase tracking-[0.24em] text-slate-400">
-                Graduation Year
-              </p>
-            </div>
-          </div>
+          <a
+            href="mailto:sakthiveldesigner05@gmail.com"
+            className="inline-flex w-fit items-center gap-2 text-sm text-slate-300 transition hover:text-electric"
+          >
+            <Mail size={16} /> sakthiveldesigner05@gmail.com
+          </a>
         </motion.div>
 
         {/* Right Profile Image Section */}
@@ -111,14 +106,14 @@ export default function HeroSection() {
         >
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.24em] text-electric">Mechanical mind</p>
+              <p className="text-sm uppercase tracking-[0.24em] text-electric">Design focus</p>
               <p className="mt-1 text-lg font-semibold text-slate-100 sm:text-xl">
-                CAD & Industrial systems driven by innovation.
+                Mechanical design, product development, and manufacturing.
               </p>
             </div>
             <p className="text-sm text-slate-400 sm:max-w-xs">
-              High-fidelity simulation, manufacturing-ready design, and premium recruiter-first
-              presentation.
+              Seeking opportunities in mechanical design, product development, or manufacturing
+              engineering.
             </p>
           </div>
         </motion.div>

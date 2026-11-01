@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "incremental": true
   },
+<<<<<<< HEAD
   "include": [
     "next-env.d.ts",
     "pages/**/*.ts",
@@ -38,4 +39,8 @@
     ".next",
     "**/node_modules"
   ]
+=======
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "sakthivel-vite-portfolio"]
+>>>>>>> 9f184ba (Update Sakthi portfolio and resume)
 }

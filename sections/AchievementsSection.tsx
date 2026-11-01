@@ -4,33 +4,13 @@ import { motion } from 'framer-motion';
 
 const achievements = [
   {
-    title: 'Best Research Paper Award',
+    title: 'EDP Student Innovation Ambassador',
     description:
-      'Recognized for research excellence and engineering innovation in mechanical systems.',
+      'Supported entrepreneurship activities, student pitching, and an eight-hour startup challenge.',
   },
   {
-    title: 'Innovation Ambassador Certification',
-    description: 'Awarded by AICTE for driving creativity, mentorship, and technology outreach.',
-  },
-  {
-    title: 'TN Impact Hackathon Mentor',
-    description:
-      'Supported high-performing teams through rapid prototyping, presentation coaching, and technical strategy.',
-  },
-  {
-    title: 'Hackathon Team Leader',
-    description:
-      'Led cross-functional teams to deliver competitive engineering solutions under tight deadlines.',
-  },
-  {
-    title: 'Drone Technology Workshop',
-    description:
-      'Delivered technical instruction on UAV design, stability, and manufacturing best practices.',
-  },
-  {
-    title: 'Leadership Recognition',
-    description:
-      'Earned institutional commendation for initiative, collaboration, and team outcomes.',
+    title: 'Innovation Student Coordinator',
+    description: 'Supported innovation and intellectual property awareness.',
   },
 ];
 

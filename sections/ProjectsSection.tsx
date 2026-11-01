@@ -1,34 +1,49 @@
 import SectionHeading from '../components/SectionHeading';
 import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion';
+import { BatteryCharging, Bot, Cog, Factory, FlaskConical } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Mechanical Assembly Workflow',
+    title: 'Hydrogen Production System',
+    meta: 'SIH 2025',
     description:
-      'Developed an optimized CAD assembly and documentation system for manufacturable mechanical modules, reducing design iteration time by 25%.',
-    technologies: ['SolidWorks', 'BOM', 'GD&T'],
-    image: '/project-assembly.svg',
-    githubUrl: 'https://github.com/sakthivel/mechanical-assembly',
-    detailsUrl: '/projects#project-1',
+      'Explored water electrolysis, renewable energy integration, process automation, and hydrogen storage concepts.',
+    technologies: ['Water Electrolysis', 'Renewable Energy', 'Process Automation'],
+    icon: FlaskConical,
+    logo: '/logos/sih.png',
   },
   {
-    title: 'Smart Product Prototype',
+    title: 'Self-Charging Electric Vehicle Concept',
+    meta: 'Electric Mobility',
     description:
-      'Designed a research-grade prototype featuring precision mounting, motion study, and electrical housing for a robotics workshop.',
-    technologies: ['CATIA', 'ANSYS', 'Product Design'],
-    image: '/project-prototype.svg',
-    githubUrl: 'https://github.com/sakthivel/smart-prototype',
-    detailsUrl: '/projects#project-2',
+      'Studied auxiliary energy recovery, battery monitoring, energy management, and regenerative braking.',
+    technologies: ['Electric Vehicle', 'Energy Recovery', 'Battery Monitoring'],
+    icon: BatteryCharging,
   },
   {
-    title: 'CAD Design System',
+    title: 'AI Application Concepts',
+    meta: 'Workflow Automation & Computer Vision',
     description:
-      'Created a reusable CAD standards library and technical drawing templates to accelerate cross-team design reviews.',
-    technologies: ['AutoCAD', 'CAD Modeling', 'Technical Drawing'],
-    image: '/project-system.svg',
-    githubUrl: 'https://github.com/sakthivel/cad-design-system',
-    detailsUrl: '/projects#project-3',
+      'Designed concepts for an agentic business assistant and CCTV-based smart attendance system using workflow automation and computer vision.',
+    technologies: ['AI Workflow Automation', 'Computer Vision'],
+    icon: Bot,
+  },
+  {
+    title: 'CAD-Based Mechanical Design & Simulation',
+    meta: 'Mechanical Design',
+    description:
+      'Created component models and engineering drawings using CATIA V5, SolidWorks, and AutoCAD; focused on assembly fitment and manufacturability.',
+    technologies: ['CATIA V5', 'SolidWorks', 'AutoCAD', 'Simulation'],
+    icon: Cog,
+  },
+  {
+    title: 'Automated Multi-Process Welding Robot',
+    meta: 'Robotics & Automation',
+    description:
+      'Designed a system concept with interchangeable end-effectors; explored arm design, workspace planning, tool changing, and motion automation.',
+    technologies: ['Robotic Welding', 'End-Effectors', 'Motion Automation'],
+    icon: Factory,
   },
 ];
 
@@ -38,9 +53,9 @@ export default function ProjectsSection() {
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Projects"
-          subtitle="Premium engineering projects with real impact and clear technical storytelling."
+          subtitle="Selected academic work in robotic welding, electric mobility, hydrogen, CAD, and AI applications."
         />
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}

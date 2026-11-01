@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Sakthivel S | Mechanical Engineer & CAD Designer"
-        description="Premium portfolio of Sakthivel S: Mechanical engineering, CAD design, innovation leadership, and engineering research contributions."
+        title="Sakthivel S | Mechanical Engineering Student & CAD Designer"
+        description="Portfolio of Sakthivel S, a Mechanical Engineering student focused on CAD design, product development, manufacturing engineering, and industrial automation."
       />
       <HeroSection />
       <AboutSection />
